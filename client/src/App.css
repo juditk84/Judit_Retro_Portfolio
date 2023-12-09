@@ -1,3 +1,6 @@
+* {
+  font-family: Pixelify Sans;
+}
 
 body{
   font-family: Pixelify Sans;
@@ -15,7 +18,8 @@ body{
 
 .main_window{
   height: 500px;
-  background-color: white;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,31,235,1) 100%);
   border: 1px solid black;
 }
 
