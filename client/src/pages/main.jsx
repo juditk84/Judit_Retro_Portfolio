@@ -8,7 +8,6 @@ export default function main() {
   const [buttonSelected, setButtonSelected] = useState("(press an action button)");
   const [activeSceneObject, setActiveSceneObject] = useState("")
 
-
   function handleMenuButtonClick(e){
     e.preventDefault()
     console.log(e.target.name)
@@ -20,11 +19,11 @@ export default function main() {
 
         <div>
 
-            <MainScene buttonSelected={buttonSelected} setActiveSceneObject={setActiveSceneObject}/>
+            <MainScene buttonSelected={buttonSelected} setButtonSelected={setButtonSelected} setActiveSceneObject={setActiveSceneObject}/>
 
         </div>
 
-        <div>{buttonSelected } 
+        <div>{buttonSelected }
              {buttonSelected === "(press an action button)" ?  "" : " " + activeSceneObject}</div>
 
         <div className="main_two_columns">
@@ -38,7 +37,7 @@ export default function main() {
                 <button onClick={handleMenuButtonClick} name="Close" className="grid_item">Close</button>
                 <button onClick={handleMenuButtonClick} name="Talk To" className="grid_item">Talk To</button>
                 <button onClick={handleMenuButtonClick} name="Pull" className="grid_item">Pull</button>
-     
+
             </div>
 
 
