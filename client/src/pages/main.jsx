@@ -5,15 +5,13 @@ import MainScene from '../components/MainScene'
 export default function main() {
 
   //state:
-  const [buttonSelected, setButtonSelected] = useState("(press an action button)");
+  const [buttonSelected, setButtonSelected] = useState({name: "(press an action button)"});
   const [activeSceneObject, setActiveSceneObject] = useState("")
 
   function handleMenuButtonClick(e){
     e.preventDefault()
-    console.log(e.target.name)
-    setButtonSelected(e.target.name)
+    setButtonSelected({name: e.target.name, actionId: e.target.id})
   }
-
   return (
     <div className="main_app_body">
 
@@ -23,20 +21,20 @@ export default function main() {
 
         </div>
 
-        <div>{buttonSelected }
-             {buttonSelected === "(press an action button)" ?  "" : " " + activeSceneObject}</div>
+        <div>{buttonSelected.name }
+             {buttonSelected.name === "(press an action button)" ?  "" : " " + activeSceneObject}</div>
 
         <div className="main_two_columns">
             <div className="main_buttons_grid">
-                <button onClick={handleMenuButtonClick} name="Give" className="grid_item">Give</button>
-                <button onClick={handleMenuButtonClick} name="Pick Up" className="grid_item">Pick up</button>
-                <button onClick={handleMenuButtonClick} name="Use" className="grid_item">Use</button>
-                <button onClick={handleMenuButtonClick} name="Open" className="grid_item">Open</button>
-                <button onClick={handleMenuButtonClick} name="Look At" className="grid_item">Look at</button>
-                <button onClick={handleMenuButtonClick} name="Push" className="grid_item">Push</button>
-                <button onClick={handleMenuButtonClick} name="Close" className="grid_item">Close</button>
-                <button onClick={handleMenuButtonClick} name="Talk To" className="grid_item">Talk to</button>
-                <button onClick={handleMenuButtonClick} name="Pull" className="grid_item">Pull</button>
+                <button onClick={handleMenuButtonClick} id="1" name="Give" className="grid_item">Give</button>
+                <button onClick={handleMenuButtonClick} id="2" name="Pick Up" className="grid_item">Pick up</button>
+                <button onClick={handleMenuButtonClick} id="3" name="Use" className="grid_item">Use</button>
+                <button onClick={handleMenuButtonClick} id="4" name="Open" className="grid_item">Open</button>
+                <button onClick={handleMenuButtonClick} id="5" name="Look At" className="grid_item">Look at</button>
+                <button onClick={handleMenuButtonClick} id="6" name="Push" className="grid_item">Push</button>
+                <button onClick={handleMenuButtonClick} id="7" name="Close" className="grid_item">Close</button>
+                <button onClick={handleMenuButtonClick} id="8" name="Talk To" className="grid_item">Talk to</button>
+                <button onClick={handleMenuButtonClick} id="9" name="Pull" className="grid_item">Pull</button>
 
             </div>
 

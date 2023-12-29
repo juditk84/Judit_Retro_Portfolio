@@ -104,12 +104,24 @@ export default function MainScene({setActiveSceneObject, buttonSelected, setButt
     }
 
     // the interactuable elements in the scene:
-    const Interactuable = ({position, size, name}) => {
+    const Interactuable = ({position, size, name, id}) => {
 
-        function handleClick(name){
-            // console.log(event.target.name)
-            console.log("clicked a", name)
-            setButtonSelected("(press an action button)")
+        async function handleClick(id, name){
+
+            if(buttonSelected.actionId){
+                try {
+                    const response = await fetch(`/api/${id}/${buttonSelected.actionId}`);
+                    const data = await response.json();
+                    setNarratorMessage(data.output);
+                  } catch (error) {
+                    console.log(error);
+                  }
+            }
+                
+            
+            setTimeout(() => {setNarratorMessage("");}, 2500)
+
+            setButtonSelected({name: "(press an action button)"})
 
         }
 
@@ -124,7 +136,7 @@ export default function MainScene({setActiveSceneObject, buttonSelected, setButt
         return (
             <Plane onPointerEnter={() => handlePointerEnter(name)} 
                    onPointerLeave={() => handlePointerLeave(name)}
-                   onClick={() => handleClick(name)} 
+                   onClick={() => handleClick(id, name)} 
                    position={position} 
                    args={size}>
 
@@ -145,7 +157,7 @@ export default function MainScene({setActiveSceneObject, buttonSelected, setButt
             <Interactuable name="a file cabinet" position={[-1.05, -1.3, 4.6]} size={[0.5, 0.8]}/>
 
             <SpritePlane name="chair" textureRoute="sprites/main_scene/chair.png" size={[3, 3]} position={[0, -0.5, 4.5]}/>
-            <Interactuable name="a chair" position={[-0.5, -1.3, 4.6]} size={[0.5, 1]}/>
+            <Interactuable id="1" name="a chair" position={[-0.5, -1.3, 4.6]} size={[0.5, 1]}/>
 
             <SpritePlane name="background wall" textureRoute="sprites/main_scene/background_wall.png" size={[15, 9]} position={[0, 2, 2]}/>
             <SpritePlane name="right wall" textureRoute="sprites/main_scene/background_wall.png"  size={[15, 9]} position={[7.5, 2, 2]} rotation={[0, -1.5, 0]}/>

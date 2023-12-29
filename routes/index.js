@@ -20,7 +20,7 @@ router.get("/:InteractuableId/:ActionId", async (req, res) => {
         ActionId: ActionId
       },
     });
-    res.send(output.output);
+    res.send(output);
   } catch (error) {
     console.error(error);
     res.status(500).send(error);
