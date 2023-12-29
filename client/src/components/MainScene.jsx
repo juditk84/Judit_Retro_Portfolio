@@ -1,6 +1,6 @@
 import React from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { Plane, useTexture } from '@react-three/drei'
+import { Plane, useTexture, PerspectiveCamera } from '@react-three/drei'
 import { useRef, useState } from 'react'
 import { NearestFilter } from "three"
 
@@ -69,14 +69,67 @@ export default function MainScene({setActiveSceneObject, buttonSelected, setButt
         )
     }
 
-    const SpritePlane = () => {
+    const MainCamera = () => {
 
-        const planeTestTexture = useTexture("./public/toad_walk.png")
-        planeTestTexture.minFilter = NearestFilter
-        planeTestTexture.magFilter = NearestFilter
+        const ref = useRef();
+
+        useFrame((state, delta) => {
+
+            // console.log(state)
+            state.camera.position.x = state.pointer.x / 2
+            state.camera.position.y = state.pointer.y / 4
+
+
+        })
+
         return (
-            <Plane args={[10, 10]} >
-                <meshStandardMaterial map={planeTestTexture} transparent/>
+            <PerspectiveCamera position={[0, 0, 10]} makeDefault />
+        )
+    }
+
+    // the visual elements in the scene:
+    const SpritePlane = ({textureRoute, size, position, rotation, name}) => {
+
+        const planeTexture = useTexture(`./public/${textureRoute}`)
+
+        //this keeps the pixelart crispiness:
+        planeTexture.minFilter = NearestFilter
+        planeTexture.magFilter = NearestFilter
+
+        return (
+            <Plane rotation={rotation} position={position} args={size} >
+                <meshStandardMaterial map={planeTexture} transparent/>
+            </Plane>
+        )
+    }
+
+    // the interactuable elements in the scene:
+    const Interactuable = ({position, size, name}) => {
+
+        function handleClick(name){
+            // console.log(event.target.name)
+            console.log("clicked a", name)
+            setButtonSelected("(press an action button)")
+
+        }
+
+        function handlePointerEnter(name){
+            setActiveSceneObject(name)
+        }
+
+        function handlePointerLeave(name){
+            setActiveSceneObject("")
+        }
+
+        return (
+            <Plane onPointerEnter={() => handlePointerEnter(name)} 
+                   onPointerLeave={() => handlePointerLeave(name)}
+                   onClick={() => handleClick(name)} 
+                   position={position} 
+                   args={size}>
+
+                <meshStandardMaterial visible={false} color="red"/>
+
             </Plane>
         )
     }
@@ -84,14 +137,20 @@ export default function MainScene({setActiveSceneObject, buttonSelected, setButt
   return (
     <div className="main_window">
         <div style={{color: "black"}}> <br /><br />{narratorMessage}</div>
-        <Canvas>
+        <Canvas >
+            <MainCamera/>
             
-            <SpritePlane />
+            <SpritePlane name="desk" textureRoute="sprites/main_scene/desk.png" size={[3, 3]} position={[0, -0.5, 4]}/>
+            <Interactuable name="a computer" position={[0.5, -0.5, 4.1]} />
+            <Interactuable name="a file cabinet" position={[-1.05, -1.3, 4.6]} size={[0.5, 0.8]}/>
 
-            <Cube name="a not so regular cube" position={[0, 0, 0]} />
+            <SpritePlane name="chair" textureRoute="sprites/main_scene/chair.png" size={[3, 3]} position={[0, -0.5, 4.5]}/>
+            <Interactuable name="a chair" position={[-0.5, -1.3, 4.6]} size={[0.5, 1]}/>
 
-                <ambientLight intensity={0.1} />
-                <directionalLight color="white" position={[0, 0, 5]} />
+            <SpritePlane name="background wall" textureRoute="sprites/main_scene/background_wall.png" size={[15, 9]} position={[0, 2, 2]}/>
+            <SpritePlane name="right wall" textureRoute="sprites/main_scene/background_wall.png"  size={[15, 9]} position={[7.5, 2, 2]} rotation={[0, -1.5, 0]}/>
+
+                <ambientLight intensity={4} />
 
         </Canvas>
     </div>

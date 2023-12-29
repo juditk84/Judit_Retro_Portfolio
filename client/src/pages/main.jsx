@@ -29,13 +29,13 @@ export default function main() {
         <div className="main_two_columns">
             <div className="main_buttons_grid">
                 <button onClick={handleMenuButtonClick} name="Give" className="grid_item">Give</button>
-                <button onClick={handleMenuButtonClick} name="Pick Up" className="grid_item">Pick Up</button>
+                <button onClick={handleMenuButtonClick} name="Pick Up" className="grid_item">Pick up</button>
                 <button onClick={handleMenuButtonClick} name="Use" className="grid_item">Use</button>
                 <button onClick={handleMenuButtonClick} name="Open" className="grid_item">Open</button>
-                <button onClick={handleMenuButtonClick} name="Look At" className="grid_item">Look At</button>
+                <button onClick={handleMenuButtonClick} name="Look At" className="grid_item">Look at</button>
                 <button onClick={handleMenuButtonClick} name="Push" className="grid_item">Push</button>
                 <button onClick={handleMenuButtonClick} name="Close" className="grid_item">Close</button>
-                <button onClick={handleMenuButtonClick} name="Talk To" className="grid_item">Talk To</button>
+                <button onClick={handleMenuButtonClick} name="Talk To" className="grid_item">Talk to</button>
                 <button onClick={handleMenuButtonClick} name="Pull" className="grid_item">Pull</button>
 
             </div>
