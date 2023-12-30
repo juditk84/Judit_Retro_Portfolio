@@ -10,12 +10,17 @@ module.exports = {
 			 updatedAt: new Date(),
      },
      {
-      name: 'computer',
+      name: 'poster',
       createdAt: new Date(),
 			updatedAt: new Date(),
     },
     {
-      name: 'file cabinet',
+      name: 'computer monitor',
+      createdAt: new Date(),
+			updatedAt: new Date(),
+    },
+    {
+      name: 'computer',
       createdAt: new Date(),
 			updatedAt: new Date(),
     }], {});

@@ -1,21 +1,26 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import { Route, Routes } from 'react-router-dom'
+import InteractionProvider from './components/InteractionProvider'
 
 import Main from './pages/main'
+import PosterModal from './pages/PosterModal'
+
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-
+  <InteractionProvider>
       <Routes>
-        <Route path="/" element={<Main />}/>
+        <Route path="/" element={<Main />}>
+          <Route path="/poster" element={<PosterModal />}/>
+        </Route>
+       
       </Routes>
-      
+  </InteractionProvider>
     </>
   )
 }

@@ -1,29 +1,37 @@
 import React from 'react'
-import { useRef, useState } from 'react'
+import { useContext } from 'react'
 import MainScene from '../components/MainScene'
+import useInteraction from "../hooks/useInteraction";
+import { Outlet } from 'react-router-dom';
 
 export default function main() {
 
-  //state:
-  const [buttonSelected, setButtonSelected] = useState({name: "(press an action button)"});
-  const [activeSceneObject, setActiveSceneObject] = useState("")
+  const {activeSceneObject, setActiveSceneObject, buttonSelected, setButtonSelected, narratorMessage} = useInteraction();
 
   function handleMenuButtonClick(e){
     e.preventDefault()
     setButtonSelected({name: e.target.name, actionId: e.target.id})
   }
   return (
+
+    <div>
+
     <div className="main_app_body">
 
         <div>
 
-            <MainScene buttonSelected={buttonSelected} setButtonSelected={setButtonSelected} setActiveSceneObject={setActiveSceneObject}/>
+            <MainScene />
 
         </div>
 
-        <div>{buttonSelected.name }
-             {buttonSelected.name === "(press an action button)" ?  "" : " " + activeSceneObject}</div>
+        
 
+        {!narratorMessage ?
+        <div>
+
+        <div>{buttonSelected.name }
+             {buttonSelected.name === "(press an action button)" ?  "" : " " + activeSceneObject}
+        </div>
         <div className="main_two_columns">
             <div className="main_buttons_grid">
                 <button onClick={handleMenuButtonClick} id="1" name="Give" className="grid_item">Give</button>
@@ -42,8 +50,18 @@ export default function main() {
 
             <div>this side should be empty. <br /><br /><br /><br /><br /><br /> hola</div>
         </div>
+        
+        </div>
+      
+      : 
+      
+      <h3><br /><br /><br />{narratorMessage}</h3>
+      }
+        
 
+        <Outlet />
 
+    </div>
     </div>
   )
 }
