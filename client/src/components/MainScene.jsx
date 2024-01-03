@@ -40,7 +40,7 @@ export default function MainScene() {
             <MainCamera/>
             
             <DecorationSprite name="desk" textureRoute="sprites/main_scene/desk.png" size={[3, 3]} position={[0, -0.5, 4]}/>
-            <Interactuable name="a computer" position={[0.5, -0.5, 4.1]} />
+            <Interactuable id="3" name="a computer screen" position={[0.5, -0.5, 4.1]} />
             <Interactuable name="a file cabinet" position={[-1.05, -1.3, 4.6]} size={[0.5, 0.8]}/>
 
             <DecorationSprite name="chair" textureRoute="sprites/main_scene/chair.png" size={[3, 3]} position={[0, -0.5, 4.5]}/>

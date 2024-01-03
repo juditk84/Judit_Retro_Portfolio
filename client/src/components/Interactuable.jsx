@@ -16,7 +16,10 @@ export default function Interactuable({position, size, name, id}) {
             console.log("displaying the poster in a modal thing.")
             navigate("/poster")
         }
-        
+        else if (instruction === "lookat_screen"){
+            console.log("displaying the computer screen in a modal thing.");
+            navigate("/screen")
+        }
     }
 
     async function handleClick(id, name){
@@ -25,9 +28,9 @@ export default function Interactuable({position, size, name, id}) {
             try {
                 const response = await fetch(`/api/${id}/${buttonSelected.actionId}`);
                 const data = await response.json();
+
                 if (data.output.includes("_")){
                     handleInteractionLogic(data.output)
-
                 }
                 else{
                     setNarratorMessage(data.output);

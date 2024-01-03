@@ -15,7 +15,7 @@ module.exports = {
 			updatedAt: new Date(),
     },
     {
-      name: 'computer monitor',
+      name: 'computer screen',
       createdAt: new Date(),
 			updatedAt: new Date(),
     },

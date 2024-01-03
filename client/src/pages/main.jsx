@@ -3,6 +3,7 @@ import { useContext } from 'react'
 import MainScene from '../components/MainScene'
 import useInteraction from "../hooks/useInteraction";
 import { Outlet } from 'react-router-dom';
+import Intro from '../components/Intro';
 
 export default function main() {
 
@@ -15,6 +16,7 @@ export default function main() {
   return (
 
     <div>
+    <Intro />
 
     <div className="main_app_body">
 
@@ -29,9 +31,9 @@ export default function main() {
         {!narratorMessage ?
         <div>
 
-        <div>{buttonSelected.name }
+        <h5>{buttonSelected.name }
              {buttonSelected.name === "(press an action button)" ?  "" : " " + activeSceneObject}
-        </div>
+        </h5>
         <div className="main_two_columns">
             <div className="main_buttons_grid">
                 <button onClick={handleMenuButtonClick} id="1" name="Give" className="grid_item">Give</button>
@@ -50,7 +52,7 @@ export default function main() {
 
             <div>this side should be empty. <br /><br /><br /><br /><br /><br /> hola</div>
         </div>
-        
+
         </div>
       
       : 

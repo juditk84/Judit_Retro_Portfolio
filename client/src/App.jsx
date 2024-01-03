@@ -6,8 +6,9 @@ import InteractionProvider from './components/InteractionProvider'
 
 import Main from './pages/main'
 import PosterModal from './pages/PosterModal'
-
+import Screen from './pages/screen'
 import './App.css'
+
 
 function App() {
 
@@ -16,7 +17,8 @@ function App() {
   <InteractionProvider>
       <Routes>
         <Route path="/" element={<Main />}>
-          <Route path="/poster" element={<PosterModal />}/>
+          <Route path="/poster" element={<PosterModal />}/>      
+          <Route path="/screen" element={<Screen />}/>  
         </Route>
        
       </Routes>
