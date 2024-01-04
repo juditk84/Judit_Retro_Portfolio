@@ -12,7 +12,7 @@ export default function screen() {
     const [modalShow, setModalShow] = useState(true);
     const [selectedTab, setSelectedTab] = useState([{id: "Fullstack", selected: false, component: <Fullstack key="1"/>}, 
                                                     {id: "Musician", selected: true, component: <Musician key="2"/>},
-                                                    {id: "Work", selected: false, component: <Work key="3"/>}]);
+                                                    {id: "Work Experience", selected: false, component: <Work key="3"/>}]);
    
     const handleClose = () => {
       setModalShow(false);
@@ -59,7 +59,7 @@ export default function screen() {
           
             <div className="window" style={{width: "800px"}}>
                 <div className="title-bar">
-                    <div className="title-bar-text">A Window With Stuff In It</div>
+                    <marquee behavior="" direction="" className="title-bar-text">Judit Calero Timoneda</marquee>
                     <div className="title-bar-controls">
                     <button aria-label="Minimize"></button>
                     <button aria-label="Maximize"></button>
@@ -67,8 +67,9 @@ export default function screen() {
                     </div>
                 </div>
 
-                <div className="window-body">
-                    <p>Hello, world!</p>
+                <div className="window-body" style={{textAlign: "left"}}>
+                    <p>Computer enthusiast that started her journey at 9 years old tweaking the config.sys file in her parent's 386 computer to be able to play Simon the Sorcerer. <br />
+                    Still with the same curiosity for the inner workings of things, passionate about music from both sides of the applause, amazed by both indie and AAA technological marvels.</p>
 
                     <menu role="tablist">
                         {selectedTab.map((element, i) => <li key = {i} onClick={handleTabClick} id={element.id} role="tab" aria-selected={element.selected} className="tab_title">{element.id}</li>)}
