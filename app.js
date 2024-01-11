@@ -15,6 +15,7 @@ app.use(cookieParser());
 
 app.use(cors());  
 
+// omg this surely gives me problems:
 app.use(express.static(path.join(__dirname, "/client/dist")));
 
 app.use('/api', indexRouter);
