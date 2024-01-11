@@ -14,10 +14,10 @@ export default function musician() {
       <div className="main_two_columns">
 
         <div style={{textAlign: "left"}}>
-          <img style={{width: "50%" }} src="./public/screen_assets/meatmachine.jpeg" alt="" />
-          <img style={{width: "50%" }} src="./public/screen_assets/fronterarara.jpeg" alt="" />
-          <img style={{width: "50%" }} src="./public/screen_assets/exxabrupto.jpg" alt="" />
-          <img style={{width: "50%" }} src="./public/screen_assets/portrait.jpg" alt="" />
+          <img style={{width: "50%" }} src="/screen_assets/meatmachine.jpeg" alt="" />
+          <img style={{width: "50%" }} src="/screen_assets/fronterarara.jpeg" alt="" />
+          <img style={{width: "50%" }} src="/screen_assets/exxabrupto.jpg" alt="" />
+          <img style={{width: "50%" }} src="/screen_assets/portrait.jpg" alt="" />
 
         </div>
 
