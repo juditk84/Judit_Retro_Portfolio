@@ -15,9 +15,9 @@
   },
   "production": {
     "username": "root",
-    "password": "KDemkZDcqJ8ndJiD102sRMCOMzoD4akp",
+    "password": "HdpT8x7j7ZlQDbvPZuELDdAEmN1puSV6",
     "database": "portfolio",
-    "host": "127.0.0.1",
+    "host": "crh0za.stackhero-network.com",
     "dialect": "mysql"
   }
 }
