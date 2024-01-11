@@ -65,12 +65,12 @@ export default function MainScene() {
             <FlickeringLight name="monitorled"color={"red"} position={[1.7, -2.9, 1.6]} decay={1} />
             {lightsOn && <pointLight  size={40} color={"yellow"} decay={0} intensity={8} position={[-2.5, 1.3, 4]} />}
             
-            {/* <DecorationSprite name="wall" textureRoute="sprites/main_scene/main_scene_wall.png" size={[30, 10]} position={[2, 0, 0.4]}/>
+            <DecorationSprite name="wall" textureRoute="sprites/main_scene/main_scene_wall.png" size={[30, 10]} position={[2, 0, 0.4]}/>
             <DecorationSprite name="computer" textureRoute="sprites/main_scene/main_scene_pc.png" size={[30, 10]} position={[2, 0.5, 1.5]}/>
             {!lightsOn && <DecorationSpriteNoLight name="screen" textureRoute="sprites/main_scene/main_scene_screen.png" size={[20, 10]} position={[2, 0.5, 1.5]}/>}
             <DecorationSprite name="chair" textureRoute="sprites/main_scene/main_scene_chair.png" size={[16, 10]} position={[0, 0.5, 3]}/>
             <DecorationSprite name="lamp" textureRoute="sprites/main_scene/main_scene_lamp.png" size={[20, 10]} position={[2.3, -1, 4.5]}/>
-            <DecorationSprite name="poster" textureRoute="sprites/main_scene/poster.png" size={[2.8, 4]} position={[-1.15, 0.4, 0.4]}/> */}
+            <DecorationSprite name="poster" textureRoute="sprites/main_scene/poster.png" size={[2.8, 4]} position={[-1.15, 0.4, 0.4]}/>
 
             <Interactuable id="1" name="chair" position={[-2.6, -3.4, 3.01]} size={[3.3, 2]} />  
             <Interactuable id="2" name="poster" position={[-1.15, 0.4, 0.5]} size={[2.8, 4]}/>

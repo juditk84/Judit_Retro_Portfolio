@@ -13,11 +13,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 // app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(cors());  
+ 
 
 // omg this surely gives me problems:
 app.use(express.static(path.join(__dirname, "/client/dist")));
 
+app.use(cors()); 
 app.use('/api', indexRouter);
 
 app.get("*", (req, res) => {
