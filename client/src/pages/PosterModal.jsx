@@ -31,7 +31,7 @@ export default function PosterModal() {
         </Modal.Title>
       </Modal.Header> */}
       <Modal.Body style={{backgroundColor: "black", textAlign: "center", padding: "0"}}>
-        <img className="poster" src="./public/poster/poster.png" alt="" />
+        <img className="poster" src="/poster/poster.png" alt="" />
       </Modal.Body>
       {/* <Modal.Footer>
       <Button onClick={handleClose}>Close</Button>
