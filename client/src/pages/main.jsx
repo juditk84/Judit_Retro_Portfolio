@@ -2,9 +2,9 @@ import React from 'react'
 import { useContext } from 'react'
 import MainScene from '../components/MainScene'
 import useInteraction from "../hooks/useInteraction";
-import { Outlet } from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom';
 import Intro from '../components/Intro';
-
+import screen from './screen';
 export default function main() {
 
   const {activeSceneObject, setActiveSceneObject, buttonSelected, setButtonSelected, narratorMessage} = useInteraction();
@@ -50,7 +50,12 @@ export default function main() {
 
 
 
-            <div>this side should be empty. <br /><br /><br /><br /><br /><br /> hola</div>
+            <div style={{fontSize: 17}} >If you want to see my CV, LOOK AT the SCREEN. <br />
+                 Otherwise click around like it's 1993!<br />
+                 Remember to turn off the lights before you go<br />
+                 (no seriously USE the lightswitch, the effect is cool af)<br /><br />
+                 TL;DR <Link to="/screen">straight to the CV</Link><br /> 
+                 Why not check my <Link to="https://www.linkedin.com/in/judit-calero-timoneda-77ba06287/">LinkedIn profile</Link> instead?</div>
         </div>
 
         </div>

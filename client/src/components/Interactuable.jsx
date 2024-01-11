@@ -7,7 +7,9 @@ import Modal from 'react-bootstrap/Modal';
 export default function Interactuable({position, size, name, id}) {
 
     const navigate = useNavigate();
-    const {activeSceneObject, setActiveSceneObject, buttonSelected, setButtonSelected, narratorMessage, setNarratorMessage} = useContext(InteractionLogicContext);
+    const {activeSceneObject, setActiveSceneObject, buttonSelected, setButtonSelected, narratorMessage, setNarratorMessage, lightsOn, setLightsOn} = useContext(InteractionLogicContext);
+
+    const boomboxSong = new Audio("./public/sounds/frag_36_tape.mp3")
 
     function handleInteractionLogic(instruction){
 
@@ -19,6 +21,13 @@ export default function Interactuable({position, size, name, id}) {
         else if (instruction === "lookat_screen"){
             console.log("displaying the computer screen in a modal thing.");
             navigate("/screen")
+        }
+        else if (instruction === "use_lightswitch"){
+            console.log("using the lightswitch.")
+            setLightsOn(!lightsOn)
+        }
+        else if (instruction === "use_boombox"){
+            boomboxSong.play();
         }
     }
 

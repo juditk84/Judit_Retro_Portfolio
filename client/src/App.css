@@ -1,13 +1,15 @@
-* {
-  /* font-family: Pixelify Sans; */
-}
+
 
 body{
-  font-family: Pixelify Sans;
+  font-family: "Pixelated MS Sans Serif";
   font-size: 15px;
   background-color: #8d00d4;
   color: white;
   height: 1500px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 5%;
+  
 }
 
 .main_app_body{
@@ -20,7 +22,7 @@ body{
 .main_window{
   height: 500px;
   background: rgb(255,255,255);
-  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,31,235,1) 100%);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgb(209, 70, 0) 100%);
   border: 1px solid black;
 }
 
@@ -33,6 +35,10 @@ body{
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-gap: 3px;
+}
+
+.inventory_but_not{
+
 }
 
 .grid_item{

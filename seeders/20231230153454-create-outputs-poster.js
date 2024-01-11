@@ -7,14 +7,14 @@ module.exports = {
      await queryInterface.bulkInsert('Outputs', [{
       InteractuableId: 2,
       ActionId: 1,
-      output: "giving to poster",
+      output: "No, really, this button...",
       createdAt: new Date(),
 			updatedAt: new Date(),
      },
      {
       InteractuableId: 2,
       ActionId: 2,
-      output: "it doesn't fit in my pockets",
+      output: "It's fine where it is.",
       createdAt: new Date(),
 			updatedAt: new Date(),
      },
@@ -28,7 +28,7 @@ module.exports = {
      {
       InteractuableId: 2,
       ActionId: 4,
-      output: "can't be opened",
+      output: "Can't open a poster, you silly :-)",
       createdAt: new Date(),
 			updatedAt: new Date(),
      },
@@ -42,7 +42,7 @@ module.exports = {
      {
       InteractuableId: 2,
       ActionId: 6,
-      output: "let's not get carried away...",
+      output: "...you mean, like pushing the wall itself?",
       createdAt: new Date(),
 			updatedAt: new Date(),
      },
@@ -56,14 +56,14 @@ module.exports = {
      {
       InteractuableId: 2,
       ActionId: 8,
-      output: "hi, poster!",
+      output: "Hi, poster!",
       createdAt: new Date(),
 			updatedAt: new Date(),
      },
      {
       InteractuableId: 2,
       ActionId: 9,
-      output: "no time for this.",
+      output: "It's perfecly fine where it is!",
       createdAt: new Date(),
 			updatedAt: new Date(),
      },

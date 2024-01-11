@@ -7,6 +7,7 @@ export default function InteractionProvider({ children }) {
   const [buttonSelected, setButtonSelected] = useState({name: "(press an action button)"});
   const [activeSceneObject, setActiveSceneObject] = useState("")
   const [narratorMessage, setNarratorMessage] = useState("")
+  const [lightsOn, setLightsOn] = useState(true)
 
   //what we send through context:
   const logicObject = {
@@ -15,7 +16,9 @@ export default function InteractionProvider({ children }) {
     activeSceneObject,
     setActiveSceneObject,
     narratorMessage,
-    setNarratorMessage
+    setNarratorMessage,
+    lightsOn,
+    setLightsOn
   };
 
   return (

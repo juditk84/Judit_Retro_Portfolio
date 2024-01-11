@@ -2,7 +2,7 @@ import React from 'react'
 import { Plane, useTexture } from '@react-three/drei'
 import { NearestFilter } from "three"
 
-export default function DecorationSprite({textureRoute, size, position, rotation, name}) {
+export default function DecorationSpriteNoLight({textureRoute, size, position, rotation, name}) {
     
     const planeTexture = useTexture(`./public/${textureRoute}`)
 
@@ -12,7 +12,7 @@ export default function DecorationSprite({textureRoute, size, position, rotation
 
     return (
         <Plane rotation={rotation} position={position} args={size} >
-            <meshStandardMaterial map={planeTexture}  transparent/>
+            <meshBasicMaterial map={planeTexture}  transparent/>
         </Plane>
     )
 }

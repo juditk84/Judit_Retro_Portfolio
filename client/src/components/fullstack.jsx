@@ -5,10 +5,12 @@ export default function fullstack() {
   return (
     <div style={{textAlign: "left"}}>
       
-      <p><b>My journey as a Fullstack dev</b></p>
+      <p>I always had an interest for coding. I started my Fullstack journey with a FullStack bootcamp at CodeOp.
+        From there, i'm trying to learn new things by working on new projects like this retro portfolio you're looking at :-)
+      </p>
 
         <div className="window-body" >
-        <p> 2023 Fullstack Bootcamp</p>
+        <p><b>2023 Fullstack Bootcamp</b></p>
           <ul>
               <li>3 month full time bootcamp covering full stack technologies: <br />
               JavaScript ES6+, React.js, ReactContext API, <br />
