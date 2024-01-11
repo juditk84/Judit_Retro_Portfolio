@@ -72,13 +72,13 @@ export default function MainScene() {
             <DecorationSprite name="lamp" textureRoute="sprites/main_scene/main_scene_lamp.png" size={[20, 10]} position={[2.3, -1, 4.5]}/>
             <DecorationSprite name="poster" textureRoute="sprites/main_scene/poster.png" size={[2.8, 4]} position={[-1.15, 0.4, 0.4]}/>
 
-            
-            
             <Interactuable id="1" name="chair" position={[-2.6, -3.4, 3.01]} size={[3.3, 2]} />  
             <Interactuable id="2" name="poster" position={[-1.15, 0.4, 0.5]} size={[2.8, 4]}/>
             <Interactuable id="3" name="computer screen" position={[1.8, -0.7, 1.6]} size={[3, 2]} />
             <Interactuable id="4" name="lightswitch" position={[-7.15, -3.9, 0.5]} size={[0.4, 0.6]}/>
-            <Interactuable id="5" name="FABULOUS boombox" position={[-7.15, -3.9, 0.5]} size={[0.4, 0.6]}/>
+            <Interactuable id="5" name="FABULOUS boombox" position={[8.5, -1.4, 0.5]} size={[3.1, 1]}/>
+            <Interactuable id="6" name="lamp" position={[0.65, 2, 4.6]} size={[1.2, 1]}/>
+            <Interactuable id="7" name="the world outside" position={[-6.65, 0.4, 0.5]} size={[4.3, 4]}/>
 
                 {lightsOn && <ambientLight intensity={2}/>}
 

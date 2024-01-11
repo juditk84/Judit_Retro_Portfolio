@@ -1,15 +1,13 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { Plane, useTexture } from '@react-three/drei'
 import InteractionLogicContext from '../../contexts/InteractionLogicContext';
 import Modal from 'react-bootstrap/Modal';
 
 export default function Interactuable({position, size, name, id}) {
-
+    
     const navigate = useNavigate();
-    const {activeSceneObject, setActiveSceneObject, buttonSelected, setButtonSelected, narratorMessage, setNarratorMessage, lightsOn, setLightsOn} = useContext(InteractionLogicContext);
-
-    const boomboxSong = new Audio("./public/sounds/frag_36_tape.mp3")
+    const {activeSceneObject, setActiveSceneObject, buttonSelected, setButtonSelected, narratorMessage, setNarratorMessage, lightsOn, setLightsOn, boomboxSong, songPlaying, setSongPlaying} = useContext(InteractionLogicContext);
 
     function handleInteractionLogic(instruction){
 
@@ -27,7 +25,9 @@ export default function Interactuable({position, size, name, id}) {
             setLightsOn(!lightsOn)
         }
         else if (instruction === "use_boombox"){
-            boomboxSong.play();
+
+            songPlaying ? boomboxSong.pause() : boomboxSong.play(); 
+            setSongPlaying(!songPlaying);
         }
     }
 
