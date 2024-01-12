@@ -14,7 +14,7 @@ module.exports = {
      {
       InteractuableId: 6,
       ActionId: 2,
-      output: "That would mess the decoration, silly!",
+      output: "That would mess up the decoration, silly!",
       createdAt: new Date(),
 			updatedAt: new Date(),
      },

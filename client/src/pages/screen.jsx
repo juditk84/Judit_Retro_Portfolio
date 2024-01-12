@@ -24,7 +24,6 @@ export default function screen() {
     
     function handleTabClick(event){
         event.preventDefault();
-        console.log(event.target.id)
         const updatedSelectedTabs = selectedTab.map((tab) => {
             
             if(tab.id === event.target.id){
@@ -47,14 +46,7 @@ export default function screen() {
         onHide={handleClose}
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
-        style={{color: "black"}}
-        // centered
-      >
-        {/* <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">
-            Judit K. / musician
-          </Modal.Title>
-        </Modal.Header> */}
+        style={{color: "black"}}>
         <Modal.Body className="screen_modal"style={{backgroundColor: "black", textAlign: "center", padding: "0"}}>
           
             <div className="window" style={{width: "800px"}}>
@@ -84,9 +76,6 @@ export default function screen() {
             </div>
 
         </Modal.Body>
-        {/* <Modal.Footer>
-        <Button onClick={handleClose}>Close</Button>
-        </Modal.Footer> */}
       </Modal>
       </>
     );

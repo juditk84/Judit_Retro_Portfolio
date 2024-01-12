@@ -6,7 +6,7 @@ export default function fullstack() {
     <div style={{textAlign: "left"}}>
       
       <p>I always had an interest for coding. I started my Fullstack journey with a FullStack bootcamp at CodeOp.
-        From there, i'm trying to learn new things by working on new projects like this retro portfolio you're looking at :-)
+        From there, I'm trying to learn new things by working on new projects like this retro portfolio you're looking at :-)
       </p>
 
         <div className="window-body" >
@@ -61,15 +61,15 @@ export default function fullstack() {
             
             <ul>
               <li>Full stack app that connects event venues with volunteers.</li>
-              <li>Collaborated effectively and cross-culturally, cultivating a cohesive team dynamic</li>
-              <li>Implemented all the Google Maps API logic to show events in the map and handle the corresponding InfoWindow, <br />
+              <li>Collaborated effectively, cultivating a cohesive team dynamic</li>
+              <li>Implemented the Google Maps API logic to show events in the map and handle the corresponding InfoWindow, <br />
               used React Three Fiber to create a responsive animated 3d logo for the site, <br />
               helped deploy a Sequelized backend and built a robust frontend together with my colleagues.</li>
             </ul>
             </details>
           </li>
         </ul>
-        I'm always working on new projects, follow me on <Link>GitHub</Link> and <Link to="https://www.linkedin.com/in/judit-calero-timoneda-77ba06287/">LinkedIn</Link> to know what i'm up to!
+        I'm always working on new projects, follow me on <Link to="https://github.com/juditk84" target="_blank">GitHub</Link> and <Link to="https://www.linkedin.com/in/judit-calero-timoneda-77ba06287/" target="_blank">LinkedIn</Link> to know what I'm up to!
     </div>
   )
 }

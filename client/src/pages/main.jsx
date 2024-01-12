@@ -61,9 +61,10 @@ export default function main() {
               If you want to see my CV, LOOK AT the SCREEN. <br />
               Otherwise click around like it's 1993!<br />
               Remember to turn off the lights before you go<br />
-              (no seriously USE the lightswitch, the effect is cool af)<br /><br />
-              TL;DR <Link to="/screen">straight to the CV</Link><br /> 
-              Why not check my <Link to="https://www.linkedin.com/in/judit-calero-timoneda-77ba06287/">LinkedIn profile</Link> instead?
+              (no seriously USE the lightswitch, the effect is cool af)<br />
+              TL;DR <Link to={isStandardSizeScreen ? "/screen" : "/screen_sm"}>straight to the CV</Link><br /> <br />
+
+              <Link to="https://www.linkedin.com/in/judit-calero-timoneda-77ba06287/" target="_blank">LinkedIn</Link> // judit.calero84@gmail.com // <Link to="https://github.com/juditk84" target="_blank">Github</Link>
               </div>
 
         </div>

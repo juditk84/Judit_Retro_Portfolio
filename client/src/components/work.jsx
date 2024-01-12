@@ -19,7 +19,7 @@ export default function work() {
                           <li>Ensured University's compliance with EU regulations and policies.</li>
                           <li>Maintained organized records of international collaborations and projects.</li>
                           <li>Facilitated effective communication between University and EU authorities.</li>
-                          <li>Monitored EU policy changes relevant to university's international activities.</li>
+                          <li>Monitored EU policy changes relevant to University's international activities.</li>
                         </ul>
 
                     </details>
@@ -32,14 +32,14 @@ export default function work() {
                         <ul>
                           <li>Instrument Mastery: Proficient in teaching specific musical instruments, tailoring lessons to diverse student abilities.</li>
                           <li>Music Theory: Explaining theory concepts effectively with a strong emphasis on modern harmony (pop/rock, blues, jazz).</li>
-                          <li>Music Production: covering from the fundamentals to more advanced topics and techniques to provide a bold understanding of music production.</li>
+                          <li>Music Production: From the fundamentals to the more complex techniques for a thorough understanding of music production.</li>
                         </ul>
                     </details>
                 </li>
                 
               </ul>
-              <br /><br />I've been also teaching music in different music academies (Escola Cromàtica, Triada) 
-        and I owned a recording studio in Rubí and Castellbisbal where I recorded my own productions and other musicians comissions. <br />
+              <br /><br />I've been also teaching music in different music academies (Escola Cromàtica, Triada) and
+        I owned a recording studio in Rubí and Castellbisbal where I worked on my own productions as well as commissions. <br />
 
               </details>
           </li>
