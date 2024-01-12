@@ -1,7 +1,6 @@
 import React from 'react'
-import { useNavigate, Link, Outlet } from 'react-router-dom';
+import { useNavigate, Link} from 'react-router-dom';
 import { useState } from 'react';
-import Modal from 'react-bootstrap/Modal';
 import Fullstack from '../components/fullstack';
 import Musician from '../components/musician';
 import Work from '../components/work';
@@ -9,18 +8,15 @@ import Work from '../components/work';
 export default function screen_smartpohone() {
 
     const navigate = useNavigate();
-    const [modalShow, setModalShow] = useState(true);
     const [selectedTab, setSelectedTab] = useState([{id: "Fullstack", selected: true, component: <Fullstack key="1"/>}, 
                                                     {id: "Musician", selected: false, component: <Musician key="2"/>},
                                                     {id: "Work Experience", selected: false, component: <Work key="3"/>}]);
    
     const handleClose = () => {
-      setModalShow(false);
-      setTimeout(() => navigate("/"), 300)
+
+      navigate("/")
   
     }
-    
-    const handleShow = () => setModalShow(true);
     
     function handleTabClick(event){
         event.preventDefault();
@@ -42,6 +38,7 @@ export default function screen_smartpohone() {
 
     return (
 
+        <div className="screen_smartphone">
             <div className="window" style={{width: "100%", color: "black"}}>
                 <div className="title-bar">
                     <marquee behavior="" direction="" className="title-bar-text">Judit Calero Timoneda</marquee>
@@ -67,6 +64,7 @@ export default function screen_smartpohone() {
                 </div>
 
             </div>
+        </div>
 
     );
 }

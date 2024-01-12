@@ -24,7 +24,7 @@ export default function main() {
 
   return (
 
-    <div className="main_app_body">
+    <div className={isStandardSizeScreen ? "main_app_body" : "main_app_body_smartphone"}>
     {isStandardSizeScreen && <Intro />}
 
     <div >
