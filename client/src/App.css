@@ -4,6 +4,7 @@ body{
   font-family: "Pixelated MS Sans Serif";
   font-size: 15px;
   color: white;
+  background-color: #760dab;
 }
 
 .main_app_body{
@@ -49,7 +50,6 @@ body{
 
 .main_window{
   height: 500px;
-  background: rgb(255,255,255);
   background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgb(209, 70, 0) 100%);
   border: 3px solid black;
 }

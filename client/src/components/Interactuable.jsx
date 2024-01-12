@@ -17,19 +17,15 @@ export default function Interactuable({position, size, name, id}) {
 
         // displaying the poster in a modal thing:
         if(instruction === "lookat_poster"){
-            console.log("displaying the poster in a modal thing.")
             navigate("/poster")
         }
         else if (instruction === "lookat_screen"){
-            console.log("displaying the computer screen in a modal thing.");
             {isStandardSizeScreen ? navigate("/screen") : navigate("/screen_sm")}
         }
         else if (instruction === "use_lightswitch"){
-            console.log("using the lightswitch.")
             setLightsOn(!lightsOn)
         }
         else if (instruction === "use_boombox"){
-
             songPlaying ? boomboxSong.pause() : boomboxSong.play(); 
             setSongPlaying(!songPlaying);
         }
