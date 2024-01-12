@@ -1,5 +1,5 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 
@@ -32,6 +32,7 @@ export default function Intro() {
           
           LOOK AT the screen to figure out if you need to hire me or block me on your social networks. <br /><br /> <br /></p>
           <p style={{fontSize: 13}}>Portfolio built by Judit Calero in 2024 using React, CSS, React-Three/Fiber & Drei, Express.js, Sequelize, Pixelorama and love for retro pixelart. <br /><br /></p>
+          <Link to="https://www.linkedin.com/in/judit-calero-timoneda-77ba06287/" target="_blank">LinkedIn</Link> // judit.calero84@gmail.com // <Link to="https://github.com/juditk84" target="_blank">Github</Link>
         </Modal.Body>
       </Modal>
       </>

@@ -25,7 +25,7 @@ export default function main() {
   return (
 
     <div className={isStandardSizeScreen ? "main_app_body" : "main_app_body_smartphone"}>
-    {isStandardSizeScreen && <Intro />}
+    <Intro />
 
     <div >
 
@@ -41,7 +41,7 @@ export default function main() {
         <h5>{buttonSelected.name }
              {buttonSelected.name === "(press an action button)" ?  "" : " " + activeSceneObject}
         </h5>
-        {!isStandardSizeScreen && <input type="range" min="-100" max="90" onChange={handleSliderChange}/>}
+        {!isStandardSizeScreen && <input type="range" min="-85" max="85" onChange={handleSliderChange}/>}
 
         <div className={isStandardSizeScreen ? "main_two_columns" : ""}>
             <div className="main_buttons_grid">
