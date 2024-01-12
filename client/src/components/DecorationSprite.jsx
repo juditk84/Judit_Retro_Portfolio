@@ -4,7 +4,7 @@ import { NearestFilter } from "three"
 
 export default function DecorationSprite({textureRoute, size, position, rotation, name}) {
     
-    const planeTexture = useTexture(`/public/${textureRoute}`)
+    const planeTexture = useTexture(`/${textureRoute}`)
 
     //this keeps the pixelart crispiness:
     planeTexture.minFilter = NearestFilter
