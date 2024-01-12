@@ -10,7 +10,7 @@ export default function InteractionProvider({ children }) {
   const [lightsOn, setLightsOn] = useState(true)
   const boomboxSong = new Audio("./public/sounds/frag_36_tape.mp3")
   const [songPlaying, setSongPlaying] = useState(false);
-
+  
   //what we send through context:
   const logicObject = {
     buttonSelected,
@@ -23,7 +23,7 @@ export default function InteractionProvider({ children }) {
     setLightsOn,
     boomboxSong,
     songPlaying,
-    setSongPlaying
+    setSongPlaying,
   };
 
   return (

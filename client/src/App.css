@@ -3,31 +3,33 @@
 body{
   font-family: "Pixelated MS Sans Serif";
   font-size: 15px;
-  background-color: #8d00d4;
+  background-color: #630890;
   color: white;
-  height: 1500px;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-top: 5%;
-  
 }
 
 .main_app_body{
+  
+  align-items: center;
   justify-content: center;
   text-align: center;
   height: 100%;
   width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 1%;
+  
 }
 
 .main_window{
   height: 500px;
   background: rgb(255,255,255);
   background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgb(209, 70, 0) 100%);
-  border: 1px solid black;
+  border: 3px solid black;
 }
 
 .main_two_columns{
   columns: 2;
+  
 }
 
 .main_buttons_grid{
@@ -35,10 +37,12 @@ body{
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-gap: 3px;
+  padding-top: 1%;
+  padding-bottom: 2%;
 }
 
 .inventory_but_not{
-
+  padding-top: 1%;
 }
 
 .grid_item{

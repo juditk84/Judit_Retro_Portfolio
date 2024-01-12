@@ -1,7 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import useScreenSize from '../hooks/useScreenSize'
 
 export default function musician() {
+
+  const {isStandardSizeScreen} = useScreenSize();
+
   return (
     <div>I've been playing music for as long as I can remember. <br />
     I'm an experienced guitar and keyboard player, singer, music teacher and producer. I value authenticity
@@ -11,15 +15,18 @@ export default function musician() {
 
 
     
-      <div className="main_two_columns">
+      <div className={isStandardSizeScreen ? "main_two_columns" : ""}>
 
+        {isStandardSizeScreen &&
+        
         <div style={{textAlign: "left"}}>
           <img style={{width: "50%" }} src="/screen_assets/meatmachine.jpeg" alt="" />
           <img style={{width: "50%" }} src="/screen_assets/fronterarara.jpeg" alt="" />
           <img style={{width: "50%" }} src="/screen_assets/exxabrupto.jpg" alt="" />
           <img style={{width: "50%" }} src="/screen_assets/portrait.jpg" alt="" />
-
         </div>
+        
+        }
 
         <div>
         <ul className="tree-view">
@@ -42,8 +49,19 @@ export default function musician() {
               </details>
           </li>
         </ul>
+        {!isStandardSizeScreen &&
+        
+        <div style={{textAlign: "left"}}>
+          <img style={{width: "50%" }} src="/screen_assets/meatmachine.jpeg" alt="" />
+          <img style={{width: "50%" }} src="/screen_assets/fronterarara.jpeg" alt="" />
+          <img style={{width: "50%" }} src="/screen_assets/exxabrupto.jpg" alt="" />
+          <img style={{width: "50%" }} src="/screen_assets/portrait.jpg" alt="" />
+        </div>
+        
+        }
         You can follow me on <Link to="https://www.instagram.com/_juditk/" target="_blank">Instagram</Link> to stay updated about upcoming shows and releases :-)
         </div>
+        
         
       </div>
       

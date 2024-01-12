@@ -3,11 +3,15 @@ import { useNavigate } from 'react-router-dom';
 import { Plane, useTexture } from '@react-three/drei'
 import InteractionLogicContext from '../../contexts/InteractionLogicContext';
 import Modal from 'react-bootstrap/Modal';
+import { useMediaQuery } from 'react-responsive';
 
 export default function Interactuable({position, size, name, id}) {
     
     const navigate = useNavigate();
     const {activeSceneObject, setActiveSceneObject, buttonSelected, setButtonSelected, narratorMessage, setNarratorMessage, lightsOn, setLightsOn, boomboxSong, songPlaying, setSongPlaying} = useContext(InteractionLogicContext);
+
+    const isStandardSizeScreen = useMediaQuery({ query: '(min-width: 1024px)' })
+
 
     function handleInteractionLogic(instruction){
 
@@ -18,7 +22,7 @@ export default function Interactuable({position, size, name, id}) {
         }
         else if (instruction === "lookat_screen"){
             console.log("displaying the computer screen in a modal thing.");
-            navigate("/screen")
+            {isStandardSizeScreen ? navigate("/screen") : navigate("/screen_sm")}
         }
         else if (instruction === "use_lightswitch"){
             console.log("using the lightswitch.")

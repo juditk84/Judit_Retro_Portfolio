@@ -6,7 +6,7 @@ import Fullstack from '../components/fullstack';
 import Musician from '../components/musician';
 import Work from '../components/work';
 
-export default function screen() {
+export default function screen_smartpohone() {
 
     const navigate = useNavigate();
     const [modalShow, setModalShow] = useState(true);
@@ -41,23 +41,8 @@ export default function screen() {
     }
 
     return (
-      <>      
-        <Modal
-        show={modalShow}
-        onHide={handleClose}
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        style={{color: "black"}}
-        // centered
-      >
-        {/* <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">
-            Judit K. / musician
-          </Modal.Title>
-        </Modal.Header> */}
-        <Modal.Body className="screen_modal"style={{backgroundColor: "black", textAlign: "center", padding: "0"}}>
-          
-            <div className="window" style={{width: "800px"}}>
+
+            <div className="window" style={{width: "100%", color: "black"}}>
                 <div className="title-bar">
                     <marquee behavior="" direction="" className="title-bar-text">Judit Calero Timoneda</marquee>
                     <div className="title-bar-controls">
@@ -83,11 +68,5 @@ export default function screen() {
 
             </div>
 
-        </Modal.Body>
-        {/* <Modal.Footer>
-        <Button onClick={handleClose}>Close</Button>
-        </Modal.Footer> */}
-      </Modal>
-      </>
     );
 }

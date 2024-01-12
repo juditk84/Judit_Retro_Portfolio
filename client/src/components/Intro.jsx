@@ -41,11 +41,8 @@ export default function Intro() {
           interact with the scene by combining verb buttons and object clicks. They were story-rich games with a sharp sense of humour
           and challenging puzzles. This is just a tribute; there's no crazy puzzles here... it's tempting to make it cryptic but
           I want to be hired as a Fullstack dev eventually. <br /> */}
-          LOOK AT the screen to figure out if you need to hire me or block me on your social networks. <br /><br />
-          Portfolio built by Judit Calero in 2024 using React, CSS, React-Three/Fiber & Drei, Express.js, Sequelize, Pixelorama and love for retro pixelart. <br /><br />
-
-
-          </p>
+          LOOK AT the screen to figure out if you need to hire me or block me on your social networks. <br /><br /> </p>
+          <p style={{fontSize: 13}}>Portfolio built by Judit Calero in 2024 using React, CSS, React-Three/Fiber & Drei, Express.js, Sequelize, Pixelorama and love for retro pixelart. <br /><br /></p>
         </Modal.Body>
         {/* <Modal.Footer>
         <Button onClick={handleClose}>Close</Button>

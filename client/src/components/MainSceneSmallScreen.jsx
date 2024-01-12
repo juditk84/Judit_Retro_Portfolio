@@ -11,8 +11,9 @@ import Interactuable from './Interactuable'
 
 import { useMediaQuery } from 'react-responsive'
 
-export default function MainScene() {
+export default function MainSceneSmallScreen({cameraSliderValue}) {
 
+    // context:
     const {setActiveSceneObject, buttonSelected, setButtonSelected, narratorMessage, setNarratorMessage, lightsOn} = useInteraction();
     
     // state:
@@ -26,15 +27,11 @@ export default function MainScene() {
         const ref = useRef();
 
         useFrame((state, delta) => {
-
-            state.camera.position.x = state.pointer.x / 1.5
-            state.camera.position.y = state.pointer.y / 3
-            
-
+            state.camera.position.x = cameraSliderValue
         })
 
         return (
-            <PerspectiveCamera position={isStandardSizeScreen ? [0, 0, 10] : [0, 0, 13]} makeDefault />
+            <PerspectiveCamera position={[0, 0, 10]} makeDefault />
         )
     }
 
@@ -59,7 +56,7 @@ export default function MainScene() {
   return (
     <div className="main_window">
        
-        <Canvas >
+       <Canvas >
             <MainCamera/>
             <FlickeringLight name="screenlight" color={"blue"} position={[1.8, -0.8, 1.6]} decay={0}/>
             <FlickeringLight name="computerled_1" color={"green"} position={[0.15, -2.65, 1.6]} decay={1} />
