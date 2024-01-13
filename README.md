@@ -5,3 +5,4 @@ This is a Portfolio built after finishing a 3 month Fullstack dev bootcamp at Co
 
 ![image](https://github.com/juditk84/Judit_Retro_Portfolio/assets/131674854/0880510d-0902-4198-82f5-905e879bcf10)
 
+It's inspired by Point&Click games like Monkey Island, Day of the Tentacle or Fate of Atlantis, but with 2D planes placed in a Three.js scene. I hope you like it! If you have any comments or questions, don't hesitate to contact me: judit.calero84@gmail.com
