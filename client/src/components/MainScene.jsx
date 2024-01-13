@@ -27,41 +27,43 @@ export default function MainScene() {
 
         useFrame((state, delta) => {
 
-            state.camera.position.x = state.pointer.x / 1.5
-            state.camera.position.y = state.pointer.y / 3
+            ref.current.position.x = state.pointer.x / 1.5
+            ref.current.position.y = state.pointer.y / 3
             
-
         })
 
         return (
-            <PerspectiveCamera position={isStandardSizeScreen ? [0, 0, 10] : [0, 0, 13]} makeDefault />
+            <PerspectiveCamera ref={ref} position={isStandardSizeScreen ? [0, 0, 10] : [0, 0, 13]} makeDefault />
         )
     }
 
-    const FlickeringLight = ({color, position, decay, name}) => {
+    const FlickeringLight = ({color, position, decay, name, intensity}) => {
        
+        const ref = useRef();
+
         // useFrame((state, delta) => {
 
-        //     state.scene.children[2].intensity = 6 * (delta * 20)
-        //     state.scene.children[3].intensity = 5 * (delta * 10)
-        //     state.scene.children[4].intensity = 3 * (delta * 10)
-        //     state.scene.children[5].intensity = 3 * (delta * 10)
-        //     state.scene.children[6].intensity = 3 * (delta * 10)
-        //     state.scene.children[7].intensity = 0.3 * (delta * 10)
+        //     // console.log(ref.current.intensity)
+        //     // state.scene.children[2].intensity = 6 * (delta * 20)
+        //     // state.scene.children[3].intensity = 5 * (delta * 10)
+        //     // state.scene.children[4].intensity = 3 * (delta * 10)
+        //     // state.scene.children[5].intensity = 3 * (delta * 10)
+        //     // state.scene.children[6].intensity = 3 * (delta * 10)
+        //     // state.scene.children[7].intensity = 0.3 * (delta * 10)
 
         // })
 
         return(
-            <pointLight name={name} scale={[1, 1, 1]} color={color} decay={decay} position={position} />
+            <pointLight ref={ref} name={name} scale={[1, 1, 1]} color={color} decay={decay} position={position} intensity={intensity} />
         )
     }
 
   return (
     <div className="main_window">
        
-        <Canvas >
+        <Canvas>
             <MainCamera/>
-            <FlickeringLight name="screenlight" color={"blue"} position={[1.8, -0.8, 1.6]} decay={0}/>
+            <FlickeringLight name="screenlight" color={"blue"} position={[1.8, -0.8, 1.6]} decay={0} />
             <FlickeringLight name="computerled_1" color={"green"} position={[0.15, -2.65, 1.6]} decay={1} />
             <FlickeringLight name="computerled_2"color={"green"} position={[0.35, -2.65, 1.6]} decay={0.5} />
             <FlickeringLight name="computerled_3"color={"green"} position={[0.5, -2.65, 1.6]} decay={0.5} />
