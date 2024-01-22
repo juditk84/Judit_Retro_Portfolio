@@ -9,7 +9,7 @@ import MainSceneSmallScreen from '../components/MainSceneSmallScreen';
 
 export default function main() {
 
-  const {activeSceneObject, buttonSelected, setButtonSelected, narratorMessage} = useInteraction();
+  const {activeSceneObject, buttonSelected, setButtonSelected, narratorMessage, firstRun} = useInteraction();
   const {isStandardSizeScreen} = useScreenSize();
   const [cameraSliderValue, setCameraSliderValue] = useState(0);
 
@@ -25,7 +25,7 @@ export default function main() {
   return (
 
     <div className={isStandardSizeScreen ? "main_app_body" : "main_app_body_smartphone"}>
-    <Intro />
+    {firstRun && <Intro />}
 
     <div >
 

@@ -2,16 +2,18 @@ import React from 'react'
 import { useNavigate, Link } from 'react-router-dom';
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
-
+import useInteraction from '../hooks/useInteraction';
 
 export default function Intro() {
 
+    const {firstRun, setFirstRun} = useInteraction();
     const navigate = useNavigate();
     const [modalShow, setModalShow] = useState(true);
   
     const handleClose = () => {
       setModalShow(false);
       setTimeout(() => navigate("/"), 300)
+      setFirstRun(false);
     }
     const handleShow = () => setModalShow(true);
   
