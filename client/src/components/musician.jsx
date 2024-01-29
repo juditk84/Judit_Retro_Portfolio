@@ -37,7 +37,8 @@ export default function musician() {
               <ul>
                 <li><u><Link style={{color: "blue"}} to="https://open.spotify.com/album/4hEaxUOtAHOevt5bkYdiZW?si=9GJIQZCnQM-seUspkvBKRQ" target="_blank">Meat Machine</Link></u>, Obsidian Kingdom's third album.</li>
                 <li><u><Link style={{color: "blue"}} to="https://open.spotify.com/album/5qBl6ckPHkFLsMrbJ7Xo5R?si=iefxGTM1TNGshstk8uNvUw" target="_blank">Frontera Rara</Link></u>, my first solo album.</li>
-                <li><u><Link style={{color: "blue"}} to="https://on.soundcloud.com/Enss9" target="_blank">Fragment 36</Link></u> pre-released on SoundCloud.</li>
+                <li><u><Link style={{color: "blue"}} to="https://open.spotify.com/track/0FTgnzZUEn2WPzW5Iql2a8?si=79d85236c411436e" target="_blank">Fragment 36</Link></u>, first SAFO.EXE single.</li>
+                <li><u><Link style={{color: "blue"}} to="https://open.spotify.com/track/4HlL3kjCkRbeBwCni8ojNI?si=63fd8126f82c421f" target="_blank">Fragments 30 i 58b</Link></u>, second SAFO.EXE single.</li>
                 <li>Science of Noise <u><Link style={{color: "blue"}} to="https://www.scienceofnoise.net/entrevista-a-judit-calero-teclista-de-obsidian-kingdom-podriamos-convertirnos-en-un-quinteto-de-flautistas-que-versionan-a-schoenberg-y-seguiriamos-siendo-resenados-en-medios-metaleros/" target="_blank">interview.</Link></u></li>
                 <li>Fear of a Queer Planet <u><Link style={{color: "blue"}} to="https://newnoisemagazine.com/interviews/fear-of-a-queer-planet-interview-with-obsidian-kingdom-keyboardist-judit/" target="_blank">interview.</Link></u></li>
                 <li>Gender Sounds ESMUC 2023.</li>

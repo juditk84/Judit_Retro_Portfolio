@@ -35,19 +35,8 @@ export default function MainSceneSmallScreen({cameraSliderValue}) {
         )
     }
 
-    const FlickeringLight = ({color, position, decay, name}) => {
+    const StandardLight = ({color, position, decay, name}) => {
        
-        // useFrame((state, delta) => {
-
-        //     state.scene.children[2].intensity = 6 * (delta * 20)
-        //     state.scene.children[3].intensity = 5 * (delta * 10)
-        //     state.scene.children[4].intensity = 3 * (delta * 10)
-        //     state.scene.children[5].intensity = 3 * (delta * 10)
-        //     state.scene.children[6].intensity = 3 * (delta * 10)
-        //     state.scene.children[7].intensity = 0.3 * (delta * 10)
-
-        // })
-
         return(
             <pointLight name={name} scale={[1, 1, 1]} color={color} decay={decay} position={position} />
         )
@@ -58,12 +47,13 @@ export default function MainSceneSmallScreen({cameraSliderValue}) {
        
        <Canvas >
             <MainCamera/>
-            <FlickeringLight name="screenlight" color={"blue"} position={[1.8, -0.8, 1.6]} decay={0}/>
-            <FlickeringLight name="computerled_1" color={"green"} position={[0.15, -2.65, 1.6]} decay={1} />
-            <FlickeringLight name="computerled_2"color={"green"} position={[0.35, -2.65, 1.6]} decay={0.5} />
-            <FlickeringLight name="computerled_3"color={"green"} position={[0.5, -2.65, 1.6]} decay={0.5} />
-            <FlickeringLight name="computerlight_1"color={"green"} position={[0.65, -1.95, 1.6]} decay={1} />
-            <FlickeringLight name="monitorled"color={"red"} position={[1.7, -2.9, 1.6]} decay={0.5} />
+            <StandardLight name="screenlight" color={"blue"} position={[1.8, -0.8, 1.6]} decay={0}/>
+            <StandardLight name="computerled_1" color={"green"} position={[0.15, -2.65, 1.6]} decay={1} />
+            <StandardLight name="computerled_2"color={"green"} position={[0.35, -2.65, 1.6]} decay={0.5} />
+            <StandardLight name="computerled_3"color={"green"} position={[0.5, -2.65, 1.6]} decay={0.5} />
+            <StandardLight name="computerlight_1"color={"green"} position={[0.65, -1.95, 1.6]} decay={1} />
+            <StandardLight name="monitorled"color={"red"} position={[1.7, -2.9, 1.6]} decay={0.5} />
+            <StandardLight name="lightswitchLed"color={"red"} position={[-7.20, -3.9, 0.5]} decay={0.05} />
             {lightsOn && <pointLight  size={40} color={"yellow"} decay={0} intensity={8} position={[-2.5, 1.3, 4]} />}
             
             <DecorationSprite name="wall" textureRoute="sprites/main_scene/main_scene_wall.png" size={[30, 10]} position={[2, 0, 0.4]}/>
