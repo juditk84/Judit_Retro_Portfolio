@@ -2,8 +2,8 @@ import React, { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { Plane, useTexture } from '@react-three/drei'
 import InteractionLogicContext from '../../contexts/InteractionLogicContext';
-import Modal from 'react-bootstrap/Modal';
 import { useMediaQuery } from 'react-responsive';
+import one from '../fakeapi/interactions.json'
 
 export default function Interactuable({position, size, name, id}) {
     
@@ -32,30 +32,23 @@ export default function Interactuable({position, size, name, id}) {
     }
 
     async function handleClick(id, name){
-
         if(buttonSelected.actionId){
-            try {
-                const response = await fetch(`/api/${id}/${buttonSelected.actionId}`);
-                const data = await response.json();
-
-                if (data.output.includes("_")){
-                    handleInteractionLogic(data.output)
+            console.log(buttonSelected.actionId)
+                const response =  one[id - 1].outputs.find(output => +buttonSelected.actionId === +output.ActionId).output
+                console.log(response)
+                if (response.includes("_")){
+                    handleInteractionLogic(response)
                 }
                 else{
-                    setNarratorMessage(data.output);
+                    setNarratorMessage(response);
                     setTimeout(() => {setNarratorMessage("");}, 2500)
                 }
                 
-              } catch (error) {
-                console.log(error);
-              }
-        }
-            
-        
+
 
         setButtonSelected({name: "(press an action button)"})
 
-    }
+    }}
 
     function handlePointerEnter(name){
         setActiveSceneObject(name)

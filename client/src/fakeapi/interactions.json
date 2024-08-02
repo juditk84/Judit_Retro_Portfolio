@@ -1,0 +1,301 @@
+
+[
+    {"id": 1, 
+    "outputs": [
+            {
+            "ActionId": 1,
+            "output": "A chair can't be given things, it's not in its nature."
+            },
+            {
+            "ActionId": 2,
+            "output": "You overestimate my strength and pocket space."
+           },
+           {
+            "ActionId": 3,
+            "output": "no time to sit!"
+           },
+           {
+            "ActionId": 4,
+            "output": "It would be an interesting afternoon project, but no."
+           },
+           {
+            "ActionId": 5,
+            "output": "a decent chair a person can actually sit on."
+           },
+           {
+            "ActionId": 6,
+            "output": "Don't go around people's houses pushing chairs, please."
+           },
+           {
+            "ActionId": 7,
+            "output": "Nah."
+           },
+           {
+            "ActionId": 8,
+            "output": "Hi, chair!"
+           },
+           {
+            "ActionId": 9,
+            "output": "Don't go around people's houses pulling chairs, please."
+           }
+
+        ]
+    },
+    {"id": 2, 
+    "outputs": [
+       {
+            "ActionId": 1,
+            "output": "No, really, this button..."
+           },
+           {
+            "ActionId": 2,
+            "output": "It's fine where it is."
+           },
+           {
+
+            "ActionId": 3,
+            "output": "I feel the right way of using it is actually LOOKING at it."
+
+           },
+           {
+
+            "ActionId": 4,
+            "output": "Can't open a poster, you silly :-)"
+           },
+           {
+
+            "ActionId": 5,
+            "output": "lookat_poster"
+           },
+           {
+
+            "ActionId": 6,
+            "output": "...you mean, like pushing the wall itself?"
+           },
+           {
+
+            "ActionId": 7,
+            "output": "You really make no sense."
+           },
+           {
+
+            "ActionId": 8,
+            "output": "Hi, poster!"
+           },
+           {
+            "ActionId": 9,
+            "output": "It's perfecly fine where it is!"
+           }
+        ]
+    },
+    {
+        "id": 3,
+        "outputs": [
+                {
+                "ActionId": 1,
+                "output": "But give what exactly? Not a lead, this button is useless."
+               },
+               {
+                "ActionId": 2,
+                "output": "This is not Simon the Sorcerer, it doesn't fit in my pockets (or hat)."
+               },
+               {
+                "ActionId": 3,
+                "output": "I feel the right way of using it is actually LOOKING at it."
+               },
+               {
+                "ActionId": 4,
+                "output": "You don't wanna do this to a CRT monitor!"
+               },
+               {
+                "ActionId": 5,
+                "output": "lookat_screen"
+               },
+               {
+                "ActionId": 6,
+                "output": "Hey these things are expensive."
+               },
+               {
+                "ActionId": 7,
+                "output": "If it was open, I could close it."
+               },
+               {
+                "ActionId": 8,
+                "output": "Hi, screen!"
+               },
+               {
+                "ActionId": 9,
+                "output": "I'm not sure I understand what you mean here."
+               }
+        ]
+    },
+    {
+        "id": 4,
+        "outputs": [
+            {
+                "ActionId": 1,
+                "output": "This button is useless trust me xD"
+               },
+               {
+                "ActionId": 2,
+                "output": "Can't go around ripping things off walls."
+               },
+               {
+
+                "ActionId": 3,
+                "output": "use_lightswitch"
+               },
+               {
+                "ActionId": 4,
+                "output": "Nothing to be fixed about it."
+               },
+               {
+                "ActionId": 5,
+                "output": "It's a lightswitch that goes on and off. Life and its wonders."
+               },
+               {
+                "ActionId": 6,
+                "output": "Let's not get carried away..."
+               },
+               {
+                "ActionId": 7,
+                "output": "It's more about USING rather than closing."
+               },
+               {
+                "ActionId": 8,
+                "output": "Hi, lightswitch!"
+               },
+               {
+                "ActionId": 9,
+                "output": "You want me to pull it from the wall? Not happening."
+               }
+        ]
+    },
+    {
+        "id": 5,
+        "outputs": [
+            {
+                "ActionId": 1,
+                "output": "Really, really... I just added the GIVE button to keep it monkey2.exe"
+               },
+               {
+
+                "ActionId": 2,
+                "output": "I think i'll leave it there, it makes the room more FABULOUS."
+               },
+               {
+                "ActionId": 3,
+                "output": "use_boombox"
+               },
+               {
+                "ActionId": 4,
+                "output": "It's fabulously working like this, I think i'll leave it closed."
+               },
+               {
+                "ActionId": 5,
+                "output": "It really is FABULOUS."
+               },
+               {
+                "ActionId": 6,
+                "output": "I can push the buttons if you want by USING the boombox."
+               },
+               {
+                "ActionId": 7,
+                "output": "It's not fabulously open."
+               },
+               {
+                "ActionId": 8,
+                "output": "Hi, FABULOUS!"
+               },
+               {
+                "ActionId": 9,
+                "output": "Nah it would fall, break, bla bla..."
+               }
+        ]
+    },
+    {
+        "id": 6,
+        "outputs": [
+            {
+                "ActionId": 1,
+                "output": "Already gave all my love to that lamp."
+               },
+               {
+                "ActionId": 2,
+                "output": "That would mess up the decoration, silly!"
+               },
+               {
+                "ActionId": 3,
+                "output": "Have you tried USING the lightswitch instead?"
+               },
+               {
+                "ActionId": 4,
+                "output": "But you mean, open up emotionally?"
+               },
+               {
+                "ActionId": 5,
+                "output": "Oh Lucifer, bringer of light."
+               },
+               {
+                "ActionId": 6,
+                "output": "Please stop trying to push things."
+               },
+               {
+                "ActionId": 7,
+                "output": "But you mean, close down emotionally?"
+               },
+               {
+                "ActionId": 8,
+                "output": "Hi, lamp!"
+               },
+               {
+                "ActionId": 9,
+                "output": "I'm not sure I understand what you mean here."
+               }
+        ]
+    },
+    {
+        "id": 7,
+        "outputs": [
+            {
+                "ActionId": 1,
+                "output": "Yes! Go outside! Give it all!!"
+               },
+               {
+                "ActionId": 2,
+                "output": "This is materially impossible or, at least, difficult."
+               },
+               {
+                "ActionId": 3,
+                "output": "I'm worried about you."
+               },
+               {
+                "ActionId": 4,
+                "output": "Yes! Go outside! Open their eyes!!"
+               },
+               {
+                "ActionId": 5,
+                "output": "The sheltering crimson skies."
+               },
+               {
+                "ActionId": 6,
+                "output": "I'm lost here. Push the window? Push the world outside?"
+               },
+               {
+                "ActionId": 7,
+                "output": "Let's not get too dark, but the world is closed enough..."
+               },
+               {
+                "ActionId": 8,
+                "output": "Hi, world outside!"
+               },
+               {
+                "ActionId": 9,
+                "output": "You suggest interesting and yet impossible things."
+               }
+        ]
+    }
+    
+]
+
+   
