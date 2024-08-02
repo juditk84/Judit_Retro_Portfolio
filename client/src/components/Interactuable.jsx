@@ -35,7 +35,6 @@ export default function Interactuable({position, size, name, id}) {
         if(buttonSelected.actionId){
             console.log(buttonSelected.actionId)
                 const response =  one[id - 1].outputs.find(output => +buttonSelected.actionId === +output.ActionId).output
-                console.log(response)
                 if (response.includes("_")){
                     handleInteractionLogic(response)
                 }
