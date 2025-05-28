@@ -5,11 +5,61 @@ export default function fullstack() {
   return (
     <div style={{textAlign: "left"}}>
       
-      <p>I always had an interest for coding. I started my Fullstack journey with a FullStack bootcamp at CodeOp.
-        From there, I'm trying to learn new things by working on new projects like this retro portfolio you're looking at :-)
-      </p>
+      <p><b>Experience as a Fullstack developer:</b></p>
 
+        <div className="window-body">
+        <p><b>2024-25 CRM'ESS</b></p>
+          <p>Me and Iris Huard together with La Natural Coopmunicació are developing <b>CRM'ESS</b>,
+            a CRM catered to the needs of <b>Social and Solidarity Economy</b> co-ops and small businesses. <br /> <br />
+
+            <img style={{width: "100%" }} src="/screen_assets/crmdashboard.jpg" alt="" /> <br /><br />
+
+            We're very happy with how the app is turning out and we're eager to release it. We took this opportunity 
+            as a learning experience and, for that reason, <b>we didn't use Gen AI assistance</b> in any part of its developement. <br />
+            I'm not anti-AI, but I prefer to understand thoroughly the tools I'm working with. Especially at this point of
+            my career, I think relying too much on AI could hinder my learning process. <br />
+            
+
+            <Link to="https://lanaturalcoopmunicacio.org/crmess/" target="_blank">Info Page (catalan)</Link> <br /> <br />
+
+
+            <div className="window-body">
+              <p>Features:</p>
+
+              <ul>
+                <li>Build a <b>contacts network</b> and filter by a wide range of parameters</li>
+                <li>Follow each contact's <b>projects, subdivided by tasks</b></li>
+                <li>Generate <b>budgets</b> for each project</li>
+                <li>Track <b>worker's dedication</b> to each task </li>
+                <li><b>Schedule</b> meetings and events</li>
+                <li>Rate each contact's <b>Social Balance</b> and track it over time</li>
+                <li>Get quick global and per project/contact/task <b>insights</b></li>
+                
+              </ul>
+            </div>
+
+            <div className="window-body">
+
+              <p>Technical details:</p>
+
+              <ul>
+                <li><b>Vite + Vue 3</b> Composition API for frontend</li>
+                <li><b>Tailwind</b> for styling</li>
+                <li><b>Express.js</b> for RESTful API</li>
+                <li><b>MySQL</b> database</li>
+                <li><b>Sequelize</b> ORM for database modeling</li>
+                <li><b>D3</b> for charts and data visualization</li>
+                <li><b>JWT</b> for authentication</li>
+                <li><b>Multi-tenant</b> architecture</li>
+              </ul>
+
+            </div>
+          </p>
+        </div>
         <div className="window-body" >
+
+          <hr />
+
         <p><b>2023 Fullstack Bootcamp</b></p>
           <ul>
               <li>3 month full time bootcamp covering full stack technologies: <br />

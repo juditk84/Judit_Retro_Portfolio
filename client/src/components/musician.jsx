@@ -45,6 +45,9 @@ export default function musician() {
                 <li>SAFO.EXE at Fundació Brossa.</li>
                 <li><u><Link style={{color: "blue"}} to="https://www.instagram.com/p/Cu4dKCcqFcQ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">Exxabrupto Festival</Link></u> 2023.</li>
                 <li>Arctangent festival UK 2023 with <u><Link style={{color: "blue"}} to="https://www.instagram.com/reel/CvuxgBqqgUe/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">Lys Morke.</Link></u></li>
+                <li>2024 UK Tour with <u><Link style={{color: "blue"}} to="https://www.instagram.com/p/C6Y6x5Ui6se/" target="_blank">Lys Morke.</Link></u></li>
+                <li>SAFE.EXE at <u><Link style={{color: "blue"}} to="https://www.instagram.com/p/DAyEvb-KZzO/?img_index=1" target="_blank">LEM Festival 2024</Link></u></li>
+                <li>Guitarist for <u><Link style={{color: "blue"}} to="https://www.instagram.com/p/DCb3hwCqx-N/" target="_blank">Rigoberta Bandini</Link></u> for their 2024-25 pre-tour shows <u></u></li>
               </ul>
               </details>
           </li>

@@ -4,13 +4,15 @@ import { useState } from 'react';
 import Fullstack from '../components/fullstack';
 import Musician from '../components/musician';
 import Work from '../components/work';
+import Goals from '../components/goals'
 
 export default function screen_smartpohone() {
 
     const navigate = useNavigate();
     const [selectedTab, setSelectedTab] = useState([{id: "Fullstack", selected: true, component: <Fullstack key="1"/>}, 
                                                     {id: "Musician", selected: false, component: <Musician key="2"/>},
-                                                    {id: "Work Experience", selected: false, component: <Work key="3"/>}]);
+                                                    {id: "2025 Goals", selected: false, component: <Goals key="3"/>},
+                                                    {id: "Previous Work Experience", selected: false, component: <Work key="3"/>}]);
    
     const handleClose = () => {
 
@@ -50,7 +52,7 @@ export default function screen_smartpohone() {
                 </div>
 
                 <div className="window-body" style={{textAlign: "left"}}>
-                    <p><b>Computer enthusiast that started her journey at 9 years old tweaking the config.sys file in her parent's 386 computer to be able to play Simon the Sorcerer. <br />
+                    <p><b>I'm a computer enthusiast that started her journey at 9 years old tweaking the config.sys file in her parent's 386 computer to be able to play Simon the Sorcerer. <br />
                     Still with the same curiosity for the inner workings of things, passionate about music from both sides of the applause, amazed by both indie and AAA technological marvels.</b></p>
 
                     <menu role="tablist">
